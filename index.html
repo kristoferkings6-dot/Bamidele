@@ -1,4 +1,3 @@
-Kringstar form v13 deploy · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +20,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1550508203129868');
-fbq('track','PageView');
+if(!isTest) fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1550508203129868&ev=PageView&noscript=1"/></noscript>
@@ -33,7 +32,8 @@ window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-5GHLP06H0G',{send_page_view:true,page_title:'Kringstar Qualification Form'});
-function kga(n,p){try{gtag('event',n,p||{});}catch(e){}}
+var isTest = window.location.search.indexOf('test=true') > -1;
+function kga(n,p){if(isTest)return;try{gtag('event',n,p||{});}catch(e){}}
 </script>
  
 <style>
@@ -118,11 +118,8 @@ body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-seri
 <div class="page">
  
   <div class="header">
-    <div class="brand"><div class="dot"></div>KRINGSTAR AI<div class="dot"></div></div>
-   Don't Become The Next <span>Property Scam</span><br>Victim
-    <p>Before you send any deposit — answer 7 quick questions to verify you are dealing with a legitimate agent and real title documents.</p>
-  </div>
- 
+   <div class="brand"><div class="dot"></div>KRINGSTAR AI<div class="dot"></div></div>
+<h1>Don't Become The Next <span>Property Scam</span><br>Victim</h1>
   <div class="trust-banner">
     <div class="trust-row">
       <div class="trust-item"><div class="trust-icon">🔒</div><div class="trust-text">Your information is never shared without your permission</div></div>
