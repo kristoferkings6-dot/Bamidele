@@ -20,7 +20,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1550508203129868');
-if(!isTest) fbq('track','PageView');
+fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1550508203129868&ev=PageView&noscript=1"/></noscript>
@@ -241,7 +241,7 @@ var QUESTIONS = [
   // Q6 - Proof of funds (verification signal)
   {
     key: 'proof_of_funds',
-    text: Are you prepared to show proof of funds to your verified agent once matched?',
+    text: 'Are you prepared to show proof of funds to your verified agent once matched?',
     hint: 'No documents needed now — this just confirms you are ready to move forward.',
     options: [
       { label: 'Yes  -  I can provide it immediately',      qualify: true },
