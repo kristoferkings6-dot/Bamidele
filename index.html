@@ -173,21 +173,19 @@ function buildBudgetOptions() {
  
 var QUESTIONS = [
  
-  // Q1 - Preferred location
-  {
-    key: 'preferred_location',
-    text: 'Which area of Lagos are you looking to buy in?',
-    hint: 'Select your preferred location. Bamidele has verified listings across these corridors.',
-    options: [
-      { label: 'Ajah / Sangotedo / Abraham Adesanya',  qualify: false },
-      { label: 'Lekki Phase 1 / Lekki Phase 2',        qualify: false },
-      { label: 'Victoria Island / Eko Atlantic',        qualify: false },
-      { label: 'Ikoyi',                                 qualify: false },
-      { label: 'Ikeja / GRA / Maryland',                qualify: false },
-      { label: 'Yaba / Surulere / Gbagada',             qualify: false },
-      { label: 'I am open to multiple areas',           qualify: false }
-    ]
-  },
+// Q1 - Property type (low friction opener)
+{
+  key: 'property_type',
+  text: 'What type of property are you looking to buy in Lagos?',
+  hint: 'Select the option that best matches what you are looking for.',
+  options: [
+    { label: 'Studio Apartment',    qualify: false },
+    { label: '2Bedroom Apartment',  qualify: false },
+    { label: '3Bedroom Apartment',     qualify: false },
+    { label: '5Bedroom Apartment',     qualify: false },
+    { label: 'I am open to any type',  qualify: false }
+  ]
+},
  
   // Q2 - Biggest frustration - mirrors ad angle, personalises follow-up
   {
