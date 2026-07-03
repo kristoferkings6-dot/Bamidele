@@ -224,12 +224,18 @@ var QUESTIONS = [
     ]
   },
  
-  // Q3 - Budget (most powerful qualifier)
+  // Q3 - Funding method
   {
-    key: 'budget',
-    text: 'What is your total budget for this property purchase?',
-    hint: 'Including all fees and charges. All responses are strictly confidential.',
-    options: buildBudgetOptions()
+    key: 'funding_method',
+    text: 'How are you planning to fund this purchase?',
+    hint: 'Bamidele works with buyers across all payment methods.',
+    options: [
+      { label: 'Outright Cash Payment',         qualify: true },
+      { label: 'Developer Payment Plan',        qualify: true },
+      { label: 'Mortgage or Bank Financing',    qualify: true },
+      { label: 'Combination of Cash and Loan',  qualify: true },
+      { label: 'I have not decided yet',        qualify: 'disqualify' }
+    ]
   },
  
   // Q4 - Purchase timeline
@@ -245,19 +251,14 @@ var QUESTIONS = [
     ]
   },
  
-  // Q5 - Funding method
+   // Q5 - Budget (most powerful qualifier)
   {
-    key: 'funding_method',
-    text: 'How are you planning to fund this purchase?',
-    hint: 'Bamidele works with buyers across all payment methods.',
-    options: [
-      { label: 'Outright Cash Payment',         qualify: true },
-      { label: 'Developer Payment Plan',        qualify: true },
-      { label: 'Mortgage or Bank Financing',    qualify: true },
-      { label: 'Combination of Cash and Loan',  qualify: true },
-      { label: 'I have not decided yet',        qualify: 'disqualify' }
-    ]
+    key: 'budget',
+    text: 'What is your total budget for this property purchase?',
+    hint: 'Including all fees and charges. All responses are strictly confidential.',
+    options: buildBudgetOptions()
   },
+ 
  
   // Q6 - Proof of funds (verification signal)
   {
